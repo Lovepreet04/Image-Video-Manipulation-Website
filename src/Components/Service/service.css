@@ -1,0 +1,56 @@
+.imgContainer{
+    padding: 10px;
+    margin: auto;
+    border: 5px dashed #58255b;
+    /* max-height: auto; */
+}
+.form-section{
+    padding: 2rem;
+    
+}
+.get-started{
+    background-color: #58255b;
+    width:100%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+.get-started:hover{
+    background-color: white;
+    color:#58255b;
+    border: 1px solid #58255b;
+}
+.get-started:active{
+    background-color: #58255b !important;
+  color: white !important;
+}
+.uploadedIMG{
+  width: 80%;
+    display: flex;
+    height: auto;
+    max-height: 325px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: auto;
+}
+.uploadimage{
+  /* margin-top:auto; */
+  margin-bottom: 15px;
+  max-height: 29rem;
+}
+
+/* sign IN */
+.value3{
+  font-size: 26px;    
+  width: 50px;
+  text-align: center;
+}
+.VideoInput_video{
+  margin-bottom: 15px;
+  max-height: 18rem;
+}

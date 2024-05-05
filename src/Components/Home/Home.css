@@ -1,0 +1,88 @@
+body{
+    background-color: rgb(248 249 250);
+}
+.brand-name{
+    color:#58255b !important;
+}
+.get-started{
+    background-color: #58255b;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+.get-started:hover{
+    background-color: white;
+    color:#58255b;
+    border: 1px solid #58255b;
+}
+.get-started:active{
+    background-color: #58255b !important;
+  color: white !important;
+}
+.banner-img{
+    padding:4rem;
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+img.vert-move {
+    -webkit-animation: mover 1s infinite  alternate;
+    animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+
+/* EDIT */
+.edit-head{
+    color:#58255b;
+    font-size:30px;
+    font-weight: 500;
+    padding:10px;
+    margin-top: 10px;
+    align-items: center;
+}
+.banner-img-edit{
+    padding:20px;
+    height: 361px;
+
+}
+.banner-img-edit:hover{
+    filter: drop-shadow(0px 30px 45px #58255b);
+}
+.edit-body{
+    margin-bottom: auto;
+    margin-top: 10px;
+}
+
+/* About */
+.banner-img-about{
+    padding: 30px;
+    height: 476px;
+}
+.left_section{
+    /* margin: auto; */
+    padding: 35px;
+}
+.about_content{
+    font-weight: 300;
+    color: #58255b;
+    font-size: 18px;
+}
+.name{
+    color:black;
+    font-size:20px;
+    font-weight: 600;
+}
