@@ -87,6 +87,7 @@ export default function Video() {
                       required>
                       <option>NONE</option>
                       <option>object(vehicle) Detection</option>
+                      <option>Human Face Detection</option>
                       <option>smile Detection</option>
                       <option>Eye Detection</option>
                       <option>Pedestrian Detection</option>
@@ -185,7 +186,7 @@ export default function Video() {
                 />
               )}
             </div>
-            <button className='btn  mt-3 get-started' onClick={handleDownload}>Download Image</button>
+            <button className='btn  mt-3 get-started' onClick={handleDownload}>Download Video</button>
           </div>
         </div>
       </div>
