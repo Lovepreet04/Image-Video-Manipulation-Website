@@ -117,14 +117,6 @@ export default function Video() {
                 </div>
                 <div className='form-group'>
                   <div className='form-control'>
-                    {/* <input
-                      type="number"
-                      className="form-control form-control-lg"
-                      placeholder='height'
-                      name="height"
-                      value={height}
-                      onChange={(e) => setheight(e.target.value)}
-                    /> */}
                     <label htmlFor="sel1" className="form-label">Dimension:</label>
                     <select
                       className="form-select form-control form-control-lg"
