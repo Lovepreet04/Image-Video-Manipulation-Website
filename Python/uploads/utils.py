@@ -1,7 +1,10 @@
 import cv2 as c
 import numpy as np
 from matplotlib import pyplot as plt
+
 def readImg(img1,action,x,y):
+    x=int(x)
+    y=int(y)
     img=c.resize(img1,(x,y))
     w,h=img.shape[0],img.shape[1]
     threshold=[100,100]
@@ -33,10 +36,7 @@ def readImg(img1,action,x,y):
         filtered = c.cvtColor(img,c.COLOR_BGR2HSV)
     return filtered
 
-
 def readVid(img1,action,x,y):
-    x=int(x)
-    y=int(y)
     img=c.resize(img1,(x,y))
     w,h=img.shape[0],img.shape[1]
     threshold=[100,100]
@@ -45,15 +45,21 @@ def readVid(img1,action,x,y):
     gry= c.cvtColor(img,c.COLOR_BGR2GRAY)
     if action == 'edgeDetection':
         filtered = c.Canny(img,threshold[0],threshold[1])
-    elif action=='object(vehicle) Detection':
-        path='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\cars.xml'
+    # elif action=='object(vehicle) Detection':
+    #     path='cars.xml'
+    #     car=c.CascadeClassifier(path)
+    #     cars= car.detectMultiScale(gry,1.2,3)
+    #     for (x,y,w,h) in cars:
+    #         c.rectangle(filtered,(x,y),(x+w,y+h),(0,0,255),3)
+    elif action=='Human Face Detection':
+        path=c.data.haarcascades + 'haarcascade_frontalface_default.xml'
         car=c.CascadeClassifier(path)
         cars= car.detectMultiScale(gry,1.2,3)
         for (x,y,w,h) in cars:
             c.rectangle(filtered,(x,y),(x+w,y+h),(0,0,255),3)
     elif action=='smile Detection':
-        path='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\smile.xml'
-        path2='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\ffd.xml'
+        path=c.data.haarcascades + 'haarcascade_smile.xml'
+        path2=c.data.haarcascades + 'haarcascade_frontalface_default.xml'
         sm=c.CascadeClassifier(path)
         fc=c.CascadeClassifier(path2)
         f= fc.detectMultiScale(gry,1.3,3)
@@ -64,8 +70,8 @@ def readVid(img1,action,x,y):
             for sx,sy,sw,sh in s:
                 c.rectangle(roi_img,(sx,sy),(sx+sw,sy+sh),(0,255,0),2)
     elif action=='Eye Detection':
-        path='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\eye.xml'
-        path2='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\ffd.xml'
+        path=c.data.haarcascades + 'haarcascade_eye.xml'
+        path2=c.data.haarcascades + 'haarcascade_frontalface_default.xml'
         sm=c.CascadeClassifier(path)
         fc=c.CascadeClassifier(path2)
         f= fc.detectMultiScale(gry,1.3,3)
@@ -76,7 +82,7 @@ def readVid(img1,action,x,y):
             for sx,sy,sw,sh in s:
                 c.rectangle(roi_img,(sx,sy),(sx+sw,sy+sh),(0,255,0),2)
     elif action=='Pedestrian Detection':
-        path='C:\\Users\\bisht\\OneDrive\\Desktop\\CODING\\lp\\REACT\\beauticam\\Python\\uploads\\xml\\full_body.xml'
+        path=c.data.haarcascades + 'haarcascade_fullbody.xml'
         sm=c.CascadeClassifier(path)
         f= sm.detectMultiScale(gry,1.1,4)
         for x,y,w,h in f:
