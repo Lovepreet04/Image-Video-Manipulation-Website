@@ -86,7 +86,7 @@ export default function Video() {
                       onChange={(e) => setaction(e.target.value)}
                       required>
                       <option>NONE</option>
-                      // <option>object(vehicle) Detection</option>
+                      {/* <option>object(vehicle) Detection</option> */}
                       <option>Human Face Detection</option>
                       <option>smile Detection</option>
                       <option>Eye Detection</option>
